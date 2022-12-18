@@ -9,6 +9,7 @@ router.route('/').get(userController.getAll)
 
 router.route('/:id').get(userController.getOne)
 
+
 router.route('/:id').delete(userController.delete)
 
 router.route('/:id').put(userController.update)

@@ -1,7 +1,9 @@
 const express = require('express')
 const router = express.Router()
 const workController = require("./controller")
+const authController = require('../util/authenticate')
 
+router.use(authController)
 
 router.route('/').post(workController.addNew)
 

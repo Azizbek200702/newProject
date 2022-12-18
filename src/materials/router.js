@@ -1,8 +1,9 @@
 const express = require('express')
 const router = express.Router()
 const materialController = require("./controller")
+const authController = require('../util/authenticate')
 
-
+router.use(authController)
 router.route('/').post(materialController.addNew)
 
 router.route('/').get(materialController.getAll)
